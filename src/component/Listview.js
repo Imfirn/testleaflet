@@ -63,19 +63,12 @@ function Listview(props) {
       </div>
       <div>
         <h2>Total</h2>
-        {/* <div class=" grid grid-cols-2">
-            <h2>case</h2>
-            <h2>1234</h2>
-        </div> */}
+        
         {totalElements}
       </div>
 
       <div className=" bg-slate-300 space-y-2 mt-2 border-t-2 border-black">
-        {/* <div class=" grid grid-cols-2">
-            <h2>Country</h2>
-            <h2>1234</h2>
-        </div> */}
-
+       
         {locationElements}
       </div>
     </div>

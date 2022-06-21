@@ -1,14 +1,14 @@
-import React, { useEffect, useState,useCallback } from "react";
+import React, { useState,useCallback } from "react";
 import MapView from "./component/MapView";
 import "leaflet/dist/leaflet.css";
-import Axios from "axios";
+
 import Testdata from './TestData'
 import Listview from "./component/Listview";
 
 const api = "https://coronavirus-tracker-api.herokuapp.com/v2/locations";
 
 function App() {
-  // const [locationArray, setLocationArray] = useState([]);
+ 
   const [selectedLocation, setSelectedLocation] = useState(null);
 	const [mapCenter, setMapCenter]= useState([13, 100]);
 
@@ -30,15 +30,7 @@ function App() {
 
   console.log(Testdata[1].id)
   return (
-    <div className="flex">
- 
-      {/* <p>Map</p> */}
-      {/* { Testdata.map((data)=>{
-        return( <p>{data.id}</p>)
-        
-      })
-      
-    } */}
+    <div className="flex">     
     
     <Listview locationArray={Testdata} selectedLocation={selectedLocation} onSelectItem={onSelectLocation} onDeselectItem={onDeselectLocation} />
     <MapView  locationArray={Testdata} mapCenter={mapCenter} onSelectMaker ={onSelectLocation}/>

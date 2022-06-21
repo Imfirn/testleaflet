@@ -17,9 +17,9 @@ L.Marker.prototype.options.icon = DefaultIcon;
 function MapView(props) {
     const {locationArray,mapCenter,onSelectMaker} =props;
     
-    function SetViewOnClick({ coords }) {
+    function SetView({  mapcenter }) {
         const map = useMap();
-        map.setView(coords, map.getZoom());
+        map.setView(mapcenter, map.getZoom());
       
         return null;
       }
@@ -40,9 +40,8 @@ function MapView(props) {
 
         return (
             <Marker 
-                // key={`${id}-${country_code}`} 
-                position={[latitude, longitude]}
-                // icon={markerIcon} 
+                key={`${id}-${country_code}`} 
+                position={[latitude, longitude]}                
                 onclick={() => onSelectMaker(id)} 
                 >
                 <Popup>{title}</Popup>
@@ -58,8 +57,8 @@ function MapView(props) {
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
     {markerElements}
-    <SetViewOnClick coords={mapCenter} />
-    {/* <Marker position={[13,101]}></Marker> */}
+    <SetView mapcenter={mapCenter} />
+   
   </MapContainer>
 
   )

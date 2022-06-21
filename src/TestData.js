@@ -45,11 +45,30 @@ const Testdata =
         country_population: 232863,
         province: "Bangkok",
         state: "Donmueang",
-        county: "Thailand",
+        county: "Donmueang",
         last_updated: "2020-03-21T14:00:00Z",
         coordinates: {
           latitude: 13.9267169,
           longitude: 100.5858786,
+        },
+        latest: {
+          confirmed: 1385,
+          deaths: 0,
+          recovered: 0,
+        },
+      },
+      {
+        id: 3,
+        country: "JP",
+        country_code: "JP",
+        country_population: 13960000,
+        province: "tokyo",
+        state: "shinjuku",
+        county: "shinjuku",
+        last_updated: "2020-03-21T14:00:00Z",
+        coordinates: {
+          latitude: 35.693840,
+          longitude: 139.703549,
         },
         latest: {
           confirmed: 1385,
